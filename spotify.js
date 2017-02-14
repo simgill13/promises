@@ -28,13 +28,32 @@ var getArtist = function(name) {
     	
     }).then(response => {
     	console.log(response);
-
     	  artist.related = response.artists;
     	  console.log(artist.related);
+    	  for (var i = 0; i < artist.related.length; i++) {
+    	  	var artistId = artist.related[i].id
+    	  	var allPromises = (`https://api.spotify.com/v1/artists/${artistId}/top-tracks`);
+    	  	 
+    	  }
+    	  
     	  return artist
+
     })
+
+
     	
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
